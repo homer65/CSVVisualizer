@@ -1,2 +1,2 @@
 # CSVVisualizer
-Visualisiert CSV Dateien
+Visualisiert CSV Dateien. So der Plan.
