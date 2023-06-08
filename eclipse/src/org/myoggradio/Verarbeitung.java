@@ -6,7 +6,6 @@ import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.chart.Axis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
@@ -26,7 +25,7 @@ public class Verarbeitung extends Application
 		stage.setTitle("CSVVisualizer");
 		Initialisierung ini = new Initialisierung();
 		ini.start(stage);
-		if (Parameter.type.equals("piechart"))
+		if (Parameter.typ.equals("piechart"))
 		{
 			PieChart pie = new PieChart();
 			ObservableList<PieChart.Data> piedata = data.getPieData(); 
@@ -36,7 +35,7 @@ public class Verarbeitung extends Application
 			stage.setScene(scene);
 			stage.show();
 		}
-		if (Parameter.type.equals("piechart"))
+		if (Parameter.typ.equals("linechart"))
 		{
 			NumberAxis xAxis = new NumberAxis();
 			NumberAxis yAxis = new NumberAxis();

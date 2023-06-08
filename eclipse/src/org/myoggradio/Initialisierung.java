@@ -41,7 +41,7 @@ public class Initialisierung
 		{
 			String parm = worte[0];
 			String wert = worte[1];
-			if (parm.equals("type")) Parameter.type = wert;
+			if (parm.equals("typ")) Parameter.typ = wert;
 			if (parm.equals("data")) Parameter.data = wert;
 			if (parm.equals("stagex")) Parameter.stagex = Integer.parseInt(wert);
 			if (parm.equals("stagey")) Parameter.stagey = Integer.parseInt(wert);
