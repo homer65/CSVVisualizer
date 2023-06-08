@@ -49,6 +49,7 @@ public class Verarbeitung extends Application implements EventHandler<ActionEven
 		{
 			PieChart pie = new PieChart();
 			chart = pie;
+			pie.setTitle(Parameter.name);
 			pie.setPrefSize(Parameter.stagex,Parameter.stagey);
 			ObservableList<PieChart.Data> piedata = data.getPieData(); 
 			pie.setData(piedata);
@@ -66,6 +67,7 @@ public class Verarbeitung extends Application implements EventHandler<ActionEven
 			yAxis.setLabel(Parameter.yAchse);
 			LineChart<Number,Number> line = new LineChart<Number,Number>(xAxis,yAxis);
 			chart = line;
+			line.setTitle(Parameter.name);
 			line.setPrefSize(Parameter.stagex,Parameter.stagey);
 			ArrayList<XYChart.Series<Number,Number>> lineData = data.getLineData(); 
 			for (int i=0;i<lineData.size();i++)

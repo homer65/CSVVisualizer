@@ -46,6 +46,7 @@ public class Initialisierung
 			String wert = worte[1];
 			if (parm.equals("typ")) Parameter.typ = wert;
 			if (parm.equals("data")) Parameter.data = wert;
+			if (parm.equals("name")) Parameter.name = wert;
 			if (parm.equals("stagex")) Parameter.stagex = Integer.parseInt(wert);
 			if (parm.equals("stagey")) Parameter.stagey = Integer.parseInt(wert);
 			if (parm.equals("xAchse")) Parameter.xAchse = wert;
