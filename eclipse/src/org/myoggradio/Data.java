@@ -55,11 +55,14 @@ public class Data
 			while (satz != null)
 			{
 				worte = satz.split(",");
-				double data0 = Double.parseDouble(worte[0]);
-				for (int i=0;i<n;i++)
+				if (worte.length == n + 1)
 				{
-					double datai = Double.parseDouble(worte[i+1]);
-					linedatas.get(i).add(i,new XYChart.Data<Number,Number>(data0,datai));
+					double data0 = Double.parseDouble(worte[0]);
+					for (int i=0;i<n;i++)
+					{
+						double datai = Double.parseDouble(worte[i+1]);
+						linedatas.get(i).add(new XYChart.Data<Number,Number>(data0,datai));
+					}
 				}
 				satz = br.readLine();
 			}
