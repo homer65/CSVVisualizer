@@ -61,7 +61,9 @@ public class Verarbeitung extends Application implements EventHandler<ActionEven
 		if (Parameter.typ.equals("linechart"))
 		{
 			NumberAxis xAxis = new NumberAxis();
+			xAxis.setLabel(Parameter.xAchse);
 			NumberAxis yAxis = new NumberAxis();
+			yAxis.setLabel(Parameter.yAchse);
 			LineChart<Number,Number> line = new LineChart<Number,Number>(xAxis,yAxis);
 			chart = line;
 			line.setPrefSize(Parameter.stagex,Parameter.stagey);
