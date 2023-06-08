@@ -42,6 +42,7 @@ public class Data
 		try
 		{
 			BufferedReader br = new BufferedReader(new FileReader(file));
+			if (Parameter.skip_first_row.equals("true")) br.readLine();
 			String satz = br.readLine();
 			String[] worte = satz.split(",");
 			int n = worte.length - 1;

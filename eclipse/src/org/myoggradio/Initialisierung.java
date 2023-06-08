@@ -51,6 +51,7 @@ public class Initialisierung
 			if (parm.equals("xAchse")) Parameter.xAchse = wert;
 			if (parm.equals("yAchse")) Parameter.yAchse = wert;
 			if (parm.equals("yLabel")) Parameter.yLabel.add(wert);
+			if (parm.equals("skip_first_row")) Parameter.skip_first_row = wert;
 		}
 	}
 }

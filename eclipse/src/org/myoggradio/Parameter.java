@@ -11,4 +11,5 @@ public class Parameter
 	public static String xAchse = "";
 	public static String yAchse = "";
 	public static ArrayList<String> yLabel = new ArrayList<String>();
+	public static String skip_first_row = "false";
 }
