@@ -36,6 +36,78 @@ public class Data
 		}
 		return erg;
 	}
+	public Number getMinY(ArrayList<XYChart.Series<Number,Number>> daten)
+	{
+		Number erg = Double.MAX_VALUE;
+		for (int i=0;i<daten.size();i++)
+		{
+			XYChart.Series<Number,Number> serie = daten.get(i);
+			ObservableList<XYChart.Data<Number,Number>> list = serie.getData();
+			for (int j=0;j<list.size();j++)
+			{
+				XYChart.Data<Number,Number> eintrag = list.get(j);
+				Number y = eintrag.getYValue();
+				double derg = erg.doubleValue();
+				double dy = y.doubleValue();
+				if (dy < derg) erg = y;
+			}
+		}
+		return erg;
+	}
+	public Number getMinX(ArrayList<XYChart.Series<Number,Number>> daten)
+	{
+		Number erg = Double.MAX_VALUE;
+		for (int i=0;i<daten.size();i++)
+		{
+			XYChart.Series<Number,Number> serie = daten.get(i);
+			ObservableList<XYChart.Data<Number,Number>> list = serie.getData();
+			for (int j=0;j<list.size();j++)
+			{
+				XYChart.Data<Number,Number> eintrag = list.get(j);
+				Number x = eintrag.getXValue();
+				double derg = erg.doubleValue();
+				double dx = x.doubleValue();
+				if (dx < derg) erg = x;
+			}
+		}
+		return erg;
+	}
+	public Number getMaxY(ArrayList<XYChart.Series<Number,Number>> daten)
+	{
+		Number erg = Double.MIN_VALUE;
+		for (int i=0;i<daten.size();i++)
+		{
+			XYChart.Series<Number,Number> serie = daten.get(i);
+			ObservableList<XYChart.Data<Number,Number>> list = serie.getData();
+			for (int j=0;j<list.size();j++)
+			{
+				XYChart.Data<Number,Number> eintrag = list.get(j);
+				Number y = eintrag.getYValue();
+				double derg = erg.doubleValue();
+				double dy = y.doubleValue();
+				if (dy > derg) erg = y;
+			}
+		}
+		return erg;
+	}
+	public Number getMaxX(ArrayList<XYChart.Series<Number,Number>> daten)
+	{
+		Number erg = Double.MIN_VALUE;
+		for (int i=0;i<daten.size();i++)
+		{
+			XYChart.Series<Number,Number> serie = daten.get(i);
+			ObservableList<XYChart.Data<Number,Number>> list = serie.getData();
+			for (int j=0;j<list.size();j++)
+			{
+				XYChart.Data<Number,Number> eintrag = list.get(j);
+				Number x = eintrag.getXValue();
+				double derg = erg.doubleValue();
+				double dx = x.doubleValue();
+				if (dx > derg) erg = x;
+			}
+		}
+		return erg;
+	}
 	public ArrayList<XYChart.Series<Number,Number>> getLineData()
 	{
 		File file = new File(Parameter.data);

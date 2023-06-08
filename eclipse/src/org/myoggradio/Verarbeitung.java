@@ -61,15 +61,25 @@ public class Verarbeitung extends Application implements EventHandler<ActionEven
 		}
 		if (Parameter.typ.equals("linechart"))
 		{
-			NumberAxis xAxis = new NumberAxis();
+			ArrayList<XYChart.Series<Number,Number>> lineData = data.getLineData(); 
+			Number minx = data.getMinX(lineData);
+			Number miny = data.getMinY(lineData);
+			Number maxx = data.getMaxX(lineData);
+			Number maxy = data.getMaxY(lineData);
+			double dminx = minx.doubleValue();
+			double dmaxx = maxx.doubleValue();
+			double dminy = miny.doubleValue();
+			double dmaxy = maxy.doubleValue();
+			double deltax = (dmaxx - dminx) / 25.0;
+			double deltay = (dmaxy - dminy) / 25.0;
+			NumberAxis xAxis = new NumberAxis(dminx,dmaxx,deltax);
 			xAxis.setLabel(Parameter.xAchse);
-			NumberAxis yAxis = new NumberAxis();
+			NumberAxis yAxis = new NumberAxis(dminy,dmaxy,deltay);
 			yAxis.setLabel(Parameter.yAchse);
 			LineChart<Number,Number> line = new LineChart<Number,Number>(xAxis,yAxis);
 			chart = line;
 			line.setTitle(Parameter.name);
 			line.setPrefSize(Parameter.stagex,Parameter.stagey);
-			ArrayList<XYChart.Series<Number,Number>> lineData = data.getLineData(); 
 			for (int i=0;i<lineData.size();i++)
 			{
 				line.getData().add(lineData.get(i));
