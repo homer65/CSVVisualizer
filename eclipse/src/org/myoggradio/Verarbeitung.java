@@ -28,6 +28,7 @@ public class Verarbeitung extends Application
 		if (Parameter.typ.equals("piechart"))
 		{
 			PieChart pie = new PieChart();
+			pie.setPrefSize(Parameter.stagex,Parameter.stagey);
 			ObservableList<PieChart.Data> piedata = data.getPieData(); 
 			pie.setData(piedata);
 			Group root = new Group(pie);
@@ -40,6 +41,7 @@ public class Verarbeitung extends Application
 			NumberAxis xAxis = new NumberAxis();
 			NumberAxis yAxis = new NumberAxis();
 			LineChart<Number,Number> line = new LineChart<Number,Number>(xAxis,yAxis);
+			line.setPrefSize(Parameter.stagex,Parameter.stagey);
 			ArrayList<XYChart.Series<Number,Number>> lineData = data.getLineData(); 
 			for (int i=0;i<lineData.size();i++)
 			{
