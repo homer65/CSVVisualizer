@@ -50,6 +50,7 @@ public class Initialisierung
 			if (parm.equals("stagey")) Parameter.stagey = Integer.parseInt(wert);
 			if (parm.equals("xAchse")) Parameter.xAchse = wert;
 			if (parm.equals("yAchse")) Parameter.yAchse = wert;
+			if (parm.equals("yLabel")) Parameter.yLabel.add(wert);
 		}
 	}
 }

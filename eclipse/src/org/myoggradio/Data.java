@@ -49,6 +49,14 @@ public class Data
 			{
 				XYChart.Series<Number,Number> serie = new XYChart.Series<Number,Number>();
 				series.add(serie);
+				try
+				{
+					serie.setName(Parameter.yLabel.get(i));
+				}
+				catch (Exception e)
+				{
+					System.out.println("Data:getLineData:Kein y-Achsenlabel:" + i);
+				}
 				ObservableList<XYChart.Data<Number,Number>> linedata = FXCollections.observableArrayList();
 				linedatas.add(linedata);
 			}

@@ -1,5 +1,7 @@
 package org.myoggradio;
 
+import java.util.ArrayList;
+
 public class Parameter 
 {
 	public static String typ = "piechart";
@@ -8,4 +10,5 @@ public class Parameter
 	public static int stagey = 600;
 	public static String xAchse = "";
 	public static String yAchse = "";
+	public static ArrayList<String> yLabel = new ArrayList<String>();
 }
