@@ -5,13 +5,16 @@ import java.io.File;
 import java.io.FileReader;
 
 import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 public class Initialisierung 
 {
 	public void start(Stage stage)
 	{
+		ExtensionFilter filter = new FileChooser.ExtensionFilter("ini Dateien","*.ini");
 		FileChooser fc = new FileChooser();
+		fc.getExtensionFilters().add(filter);
 		fc.setInitialDirectory(new File("."));
 		File iniDatei = fc.showOpenDialog(stage);
 		if (iniDatei != null)
