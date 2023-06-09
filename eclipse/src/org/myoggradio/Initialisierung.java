@@ -53,6 +53,12 @@ public class Initialisierung
 			if (parm.equals("yAchse")) Parameter.yAchse = wert;
 			if (parm.equals("yLabel")) Parameter.yLabel.add(wert);
 			if (parm.equals("skip_first_row")) Parameter.skip_first_row = wert;
+			if (parm.equals("xmin")) Parameter.xmin = Double.parseDouble(wert);
+			if (parm.equals("xmax")) Parameter.xmax = Double.parseDouble(wert);
+			if (parm.equals("ymin")) Parameter.ymin = Double.parseDouble(wert);
+			if (parm.equals("ymax")) Parameter.ymax = Double.parseDouble(wert);
+			if (parm.equals("automatex")) Parameter.automatex = wert;
+			if (parm.equals("automatey")) Parameter.automatey = wert;
 		}
 	}
 }

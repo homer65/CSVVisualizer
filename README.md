@@ -40,3 +40,15 @@ LineChart:
 (8) yLabel => Label für eine Linie - kann mehrfach angegeben werden falls mehr als eine Linie 
 
 (9) skip_first_row => true oder false - Bei true wird die erste Zeile der CSV Datei ignoriert
+
+(10) xmin  => Double Wert - Untere Grenze für xAchse falls automatex=value
+
+(11) xmax  => Double Wert - Obere Grenze für xAchse falls automatex=value
+
+(12) ymin  => Double Wert - Untere Grenze für yAchse falls automatey=value 
+
+(13) ymax  => Double Wert - Obere Grenze für yAchse fallse automatey=value
+ 
+(14) automatx => no | value | automate : no bedeutet Keine Angabe : value bedeutet xmin und xmax ziehen : automate bedeutet Grenzen werden automatisch gesetzt
+
+(15) automaty => no | value | automate : no bedeutet Keine Angabe : value bedeutet ymin und ymax ziehen : automate bedeutet Grenzen werden automatisch gesetzt

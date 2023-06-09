@@ -73,8 +73,30 @@ public class Verarbeitung extends Application implements EventHandler<ActionEven
 			double deltax = (dmaxx - dminx) / 25.0;
 			double deltay = (dmaxy - dminy) / 25.0;
 			NumberAxis xAxis = new NumberAxis(dminx,dmaxx,deltax);
-			xAxis.setLabel(Parameter.xAchse);
 			NumberAxis yAxis = new NumberAxis(dminy,dmaxy,deltay);
+			if (Parameter.automatex.equals("no"))
+			{
+				xAxis = new NumberAxis();
+			}
+			else if (Parameter.automatex.equals("value"))
+			{
+				dminx = Parameter.xmin;
+				dmaxx = Parameter.xmax;
+				deltax = (dmaxx - dminx) / 25.0;
+				xAxis = new NumberAxis(dminx,dmaxx,deltax);
+			}
+			if (Parameter.automatey.equals("no"))
+			{
+				yAxis = new NumberAxis();
+			}
+			else if (Parameter.automatey.equals("value"))
+			{
+				dminy = Parameter.ymin;
+				dmaxy = Parameter.ymax;
+				deltay = (dmaxy - dminy) / 25.0;
+				yAxis = new NumberAxis(dminy,dmaxy,deltay);
+			}
+			xAxis.setLabel(Parameter.xAchse);			
 			yAxis.setLabel(Parameter.yAchse);
 			LineChart<Number,Number> line = new LineChart<Number,Number>(xAxis,yAxis);
 			chart = line;
